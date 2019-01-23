@@ -1,7 +1,7 @@
 {-# LANGUAGE GADTs, DataKinds, ScopedTypeVariables #-}
 {-# LANGUAGE DeriveDataTypeable, DeriveFunctor, DeriveFoldable, DeriveTraversable #-}
 
-module Control.Agreement.Leader.Raft.Internal where
+module Control.Agreement.Leader.Raft.Formal where
 
 
 {-
