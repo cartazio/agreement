@@ -59,8 +59,8 @@ source-repository head
 library
   -- Modules exported by the library.
   exposed-modules:
-    Control.Agreement.Leader.Raft.Formal
-    Control.Agreement.Leader.ViewStamped.Formal
+    Control.Agreement.Leader.Raft.FormalRaft
+    Control.Agreement.Leader.ViewStamped.FormalViewStamped
 
   -- Modules included in this library but not exported.
   -- other-modules:
