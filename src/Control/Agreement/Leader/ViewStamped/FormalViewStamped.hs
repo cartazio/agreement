@@ -40,6 +40,7 @@ record Replica  clientid operation clientRequest
   -- add Need viewchange event / decider
   StartViewChange ::{- New view number -} viewNumber  -> replicaID ->
       m (Replica _ _ _ )
+
   DoViewChange :: {- new -} viewNumber -> logJournalRep ->
         {- last known local normal -} viewNumber  ->  {- highest in log-} opNum  ->
          {- highest committed -} opNum -> replicaID -> m (Replica _ _ _ _)
@@ -48,7 +49,23 @@ record Replica  clientid operation clientRequest
     {- max commit from doview -} opNumber ->
     m (Replica ____)
 
+  RecoveryRequest
 
+  RecoveryResponse
+
+  GetStateSnapshot
+
+  NewStateSnapshot
+
+  TriggerReconfiguration -- Reconfiguration
+
+  StartEpochOfReconfig -- StartEpoch
+
+  StartEpochConfirmation -- EpochStarted
+
+  CheckEpoch -- client facing ?
+
+  NewEpoch -- Client facing
 
 
 -}
