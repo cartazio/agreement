@@ -32,7 +32,7 @@ Append Entries Cycle
     Is it Marked as Committed / accepted by a quorum of nodes?
     then send Advance COmmit to followers from leader
 
-Is Quorum Good ?? ???
+Is Quorum (current majority) Good ?? ???
 
 Membership
   should only be changed by admin command

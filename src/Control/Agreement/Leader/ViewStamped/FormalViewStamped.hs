@@ -49,6 +49,8 @@ record Replica  clientid operation clientRequest
     {- max commit from doview -} opNumber ->
     m (Replica ____)
 
+  --- recovery and efficient recovery commands
+
   RecoveryRequest
 
   RecoveryResponse
@@ -57,9 +59,14 @@ record Replica  clientid operation clientRequest
 
   NewStateSnapshot
 
+  ---- cluster reconfiguration state machine commands
+
   TriggerReconfiguration -- Reconfiguration
+    -- should only be initiated via administrative role
+
 
   StartEpochOfReconfig -- StartEpoch
+
 
   StartEpochConfirmation -- EpochStarted
 
